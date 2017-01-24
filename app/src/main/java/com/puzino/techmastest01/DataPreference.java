@@ -2,6 +2,7 @@ package com.puzino.techmastest01;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 
 import java.security.MessageDigest;
@@ -16,8 +17,9 @@ public class DataPreference {
     private static String mPrefLoginName = "test_login";
     private static String mPrefPassName = "test_password";
 
+    //@param Activity - get Preference from activity
     DataPreference(Activity activity){
-        mPreferences = activity.getPreferences(Activity.MODE_PRIVATE);
+        mPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
     }
 
     String getLogin(){
@@ -28,11 +30,13 @@ public class DataPreference {
         return mPreferences.getString(mPrefPassName, "");
     }
 
+    //@param set - insert new login string
     void setLogin(String set){
         //commit writes directly, apply - in background
         mPreferences.edit().putString(mPrefLoginName, set).apply();
     }
 
+    //@param set - insert new encoded pass string
     void setPassword(String set){
         set = getSha1Hex(set);  //encode password
         mPreferences.edit().putString(mPrefPassName, set).apply();
@@ -40,7 +44,7 @@ public class DataPreference {
 
     //add a little cryptography here
     @Nullable
-    private static String getSha1Hex(String clearString)
+    static String getSha1Hex(String clearString)
     {
         try
         {

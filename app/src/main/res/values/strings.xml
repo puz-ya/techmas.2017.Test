@@ -12,8 +12,13 @@
     <!-- ok buttons -->
     <string name="button_log">Check me!</string>
     <string name="button_reg">Register me!</string>
+    <string name="ok">OK</string>
 
     <!-- main view (4th activity) -->
     <string name="hello">Hello, %s!</string>
+
+    <!-- errors -->
+    <string name="too_short">Minimum 4 symbols!</string>
+    <string name="error">Error</string>
 
 </resources>

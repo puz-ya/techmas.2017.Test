@@ -16,6 +16,7 @@ public class HelloActivity extends AppCompatActivity {
 
         //get login from preferences
         String name = new DataPreference(this).getLogin();
+        //insert name into R.string
         String hello_text = String.format(Locale.getDefault(), getString(R.string.hello), name);
 
         TextView textView = (TextView) findViewById(R.id.textView_hello);

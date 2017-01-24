@@ -11,4 +11,46 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.puzino.techmastest01.AuthActivity">
 
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/editText_auth_login"
+        android:hint="@string/login"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/editText_auth_login"
+        android:layout_alignRight="@+id/editText_auth_login"
+        android:layout_alignEnd="@+id/editText_auth_login"
+        android:layout_marginTop="30dp"
+        android:id="@+id/editText_auth_pass"
+        android:hint="@string/password"/>
+
+    <Button
+        android:text="@string/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_auth_pass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/button_auth"
+        android:onClick="onClickCheck"
+        />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_auth"
+        android:layout_marginTop="30dp"
+        />
 </RelativeLayout>

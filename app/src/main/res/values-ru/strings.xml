@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">techmasTest01</string>
+
+    <!-- main buttons -->
+    <string name="register">Регистрация</string>
+    <string name="sign_in">Вход</string>
+
+    <!-- textedit -->
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+
+    <!-- ok buttons -->
+    <string name="button_log">Войти</string>
+    <string name="button_reg">Зарегистрироваться</string>
+
+    <!-- main view (4th activity) -->
+    <string name="hello">Привет, %s!</string>
+
+</resources>
