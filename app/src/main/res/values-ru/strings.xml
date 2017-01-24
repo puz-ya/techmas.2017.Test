@@ -15,5 +15,13 @@
 
     <!-- main view (4th activity) -->
     <string name="hello">Привет, %s!</string>
+    <string name="delete">Завершить сессию</string>
+    <string name="error">Ошибка</string>
+    <string name="ok">ОК</string>
+    <string name="title_auth">Вход</string>
+    <string name="title_hello">Привет</string>
+    <string name="title_main">Добро пожаловать</string>
+    <string name="title_reg">Регистрация</string>
+    <string name="too_short">Минимум 4 символа!</string>
 
 </resources>

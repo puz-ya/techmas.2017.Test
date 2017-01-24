@@ -13,10 +13,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayShowTitleEnabled(true);
+            getSupportActionBar().setTitle(R.string.title_main);
+        }
+    }
+
+    //if we got back, we check our data
+    @Override
+    protected void onStart(){
+        super.onStart();
+        checkData();
+    }
+
+    public void checkData(){
         String tempCheck = new DataPreference(this).getLogin();
         if(!tempCheck.isEmpty()){
             Intent intent = new Intent(this, HelloActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 

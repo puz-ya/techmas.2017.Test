@@ -29,6 +29,11 @@ public class AuthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
 
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayShowTitleEnabled(true);
+            getSupportActionBar().setTitle(R.string.title_auth);
+        }
+
         mEditLogin = (EditText) findViewById(R.id.editText_auth_login);
         mEditPass = (EditText) findViewById(R.id.editText_auth_pass);
         mTextViewHint = (TextView) findViewById(R.id.hint);
